@@ -7,7 +7,13 @@ const Previewer = React.createClass({
     getInitialState() {
         return {
             'parsed': '',
-            'raw': 'blah blah'
+            'raw': '' +
+            'Heading\n=======\n\nSub-heading\n-----------\n \n' +
+            '### Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\n' +
+            'Leave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\n' +
+            'Numbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\n' +
+            'The rain---not the reign---in\nSpain.\n\n ' +
+            '*[Herman Fassett](https://freecodecamp.com/hermanfassett)*'
         }
     },
 
@@ -41,7 +47,7 @@ const Previewer = React.createClass({
                 </div>
 
                 <div className="large-6 columns"
-                     dangerouslySetInnerHTML={{__html: parsed}} />
+                     dangerouslySetInnerHTML={{__html: parsed}}/>
 
             </div>
         );
