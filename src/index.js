@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import LeadershipBoard from "./LeadershipBoard";
 import "./index.css";
+import Previewer from "./Previewer";
 
 ReactDOM.render(
-    <LeadershipBoard />,
+    <Previewer />,
     document.getElementById('root')
 );
